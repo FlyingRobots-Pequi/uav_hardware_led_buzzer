@@ -29,3 +29,12 @@ docker compose up
 ```bash
 ros2 run uav_hardware buzzer_and_led_node
 ```
+
+## Ligar/Desligar Led e Buzzer
+
+```bash
+ros2 topic pub /led std_msgs/Bool "data: true" --once
+ros2 topic pub /led std_msgs/Bool "data: false" --once
+ros2 topic pub /buzzer std_msgs/Bool "data: true" --once
+ros2 topic pub /buzzer std_msgs/Bool "data: false" --once
+```
