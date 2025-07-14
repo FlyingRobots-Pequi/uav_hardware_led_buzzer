@@ -1,0 +1,10 @@
+services:
+  uav_hardware:
+    image: uav_hardware:1.0
+    container_name: uav_hardware_container
+    privileged: true
+    devices:
+      - /dev/gpiomem:/dev/gpiomem
+      - /dev/gpiochip0:/dev/gpiochip0
+    stdin_open: true
+    tty: true
